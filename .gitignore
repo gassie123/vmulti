@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Backup
+/bin
+*.suo
+/client/Debug
+/sys/Debug
+/client/x64/Release
+/client/vmulticlient.VC.db
