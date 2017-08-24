@@ -4,7 +4,7 @@ Class=HIDClass
 ClassGuid={745a17a0-74d3-11d0-b6fe-00a0c90f57da}
 Provider=%VENDOR%
 DriverVer=
-CatalogFile=vmultidriver.cat
+CatalogFile=vmulti.cat
 
 [SourceDisksFiles]
 vmulti.sys = 99

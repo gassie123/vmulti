@@ -35,6 +35,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\hidmapper\hidkmdf.vcxproj">
+      <Project>{ec5dcaf5-3514-4e61-8201-10f5f060e096}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\sys\vmultidriver.vcxproj">
       <Project>{41dfdd0b-5604-4994-abcc-c2b270bf0fd2}</Project>
     </ProjectReference>

@@ -10,3 +10,10 @@
 /sys/Debug
 /client/x64/Release
 /client/vmulticlient.VC.db
+/hidmapper/x64/Debug
+/sys/x64
+/test/x64/Release
+/vmultipackage/x64
+/x64
+*.db
+*.opendb
