@@ -3,18 +3,20 @@ Signature="$CHICAGO$"
 Class=HIDClass
 ClassGuid={745a17a0-74d3-11d0-b6fe-00a0c90f57da}
 Provider=%VENDOR%
-DriverVer=01/10/2007,1.0.0.0
-CatalogFile=kmdfsamples.cat
+DriverVer=
+CatalogFile=vmultidriver.cat
 
 [SourceDisksFiles]
 vmulti.sys = 99
 hidkmdf.sys = 99
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=99
 
 [SourceDisksNames]
 99 = %DISK_NAME%,,,""
 
 [DestinationDirs]
-CopyFunctionDriver = 12      
+CopyFunctionDriver = 12
+vmulti.Inst_CoInstaller_CopyFiles = 11 
 
 [Manufacturer]
 %VENDOR%=Vendor, NT$ARCH$, NT$ARCH$.6.1
@@ -31,7 +33,7 @@ CopyFunctionDriver = 12
 ;   vmulti for XP thru Vista
 ;===============================================================
 [vmulti.Inst.NT]
-CopyFiles = CopyFunctionDriver
+CopyFiles = CopyFunctionDriverXP
 
 [vmulti.Inst.NT.HW]
 AddReg = vmulti_Parameters.AddReg 
@@ -43,7 +45,7 @@ AddReg = vmulti_Parameters.AddReg
 AddService = hidkmdf,,hidkmdf_Service_Inst,
 AddService = vmulti,0x00000002, vmulti_Service_Inst
 
-[CopyFunctionDriver]
+[CopyFunctionDriverXP]
 hidkmdf.sys
 
 [vmulti_Parameters.AddReg]
@@ -96,8 +98,6 @@ ServiceBinary  = %12%\vmulti.sys
 ;================================================================
 ;--- WDF Coinstaller installation ------
 ;
-[DestinationDirs]
-vmulti.Inst_CoInstaller_CopyFiles = 11
 
 [vmulti.Inst.NT.CoInstallers]
 AddReg=vmulti.Inst_CoInstaller_AddReg
@@ -108,9 +108,6 @@ HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfC
 
 [vmulti.Inst_CoInstaller_CopyFiles]
 WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,,,0x00000010    ;COPYFLG_NO_OVERWRITE (for win2k)
-
-[SourceDisksFiles]
-WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=99 ; make sure the number matches with SourceDisksNames
 
 [vmulti.Inst.NT.Wdf]
 KmdfService = vmulti, vmulti_wdfsect
