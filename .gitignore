@@ -19,3 +19,6 @@
 *.opendb
 /client/x64/Debug
 /test/x64/Debug
+/hidmapper/x64/Release
+/sys
+/test
