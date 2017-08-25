@@ -13,3 +13,4 @@
 vmulti.sys
 vmulti.inf
 WdfCoinstaller01009.dll
+hidkmdf.sys
