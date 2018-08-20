@@ -16,6 +16,7 @@ WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=99
 
 [DestinationDirs]
 CopyFunctionDriver = 12
+CopyFunctionDriverXP = 12
 vmulti.Inst_CoInstaller_CopyFiles = 11 
 
 [Manufacturer]
